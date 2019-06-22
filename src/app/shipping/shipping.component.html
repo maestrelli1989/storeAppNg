@@ -1,0 +1,7 @@
+<h2 class="text-center">Shipping Prices</h2>
+<ul class="list-group list-group-flush">
+	<li class="list-group-item shipping-item" *ngFor="let shipping of shippingCosts | async">
+		<span>{{ shipping.type }}</span>
+		<span>{{ shipping.price | currency }}</span>
+	</li>
+</ul>

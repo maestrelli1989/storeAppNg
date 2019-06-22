@@ -1,0 +1,24 @@
+<h2 class="text-center">Shop</h2>
+
+<div class="btn-sort" role="group" aria-label="Button group">
+	<button (click)="sortByDefault()" class="text-center">Sort by default</button>
+	<button (click)="sortByName()" class="text-center">Sort by name</button>
+	<button (click)="sortByPrice()" class="text-center">Sort by price</button>
+</div>
+
+<div class="card-list">
+	<div class="card-wrapper" *ngFor="let product of products; index as productId">
+		<a class="card" [title]="product.name + ' details'" [routerLink]="['/shop', productId]">
+			<img src="{{ product.imageSmall }}" alt="{{ product.name }}" title="{{ product.name }}">
+			<div class="card-body">
+				<h3 class="product-title">{{ product.name }}</h3>
+				<div class="product-price">
+					<div class="main-info">
+						Price: <span class="price-value" [ngClass]="{'low-price' : product.price < 250}">{{ product.price | currency }}</span>
+					</div>
+					<app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>

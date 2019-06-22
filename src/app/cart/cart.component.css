@@ -1,0 +1,10 @@
+form {
+	background-color: #fefefe;
+	padding: 30px;
+	border-radius: 10px;
+}
+
+.required-field {
+	font-weight: 700;
+	color: #f95050;
+}

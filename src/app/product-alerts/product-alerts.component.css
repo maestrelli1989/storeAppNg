@@ -1,0 +1,11 @@
+.notify i {
+	display: block;
+	cursor: pointer;
+	color: #7cafea;
+	transition: all 500ms;
+	font-size: 24px;
+}
+
+.notify i:hover {
+	opacity: 0.5;
+}

@@ -1,0 +1,43 @@
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+nav .nav-item {
+	color: #fefefe;
+	position: relative;
+	font-size: 20px;
+	font-family: "Roboto", Verdana, sans-serif;
+	line-height: 70px;
+	font-weight: 500;
+	margin-left: 50px;
+}
+
+nav .nav-item:first-child {
+	margin-left: 0px;
+}
+
+nav .nav-item:after {
+	position: absolute;
+	display: block;
+	content: '';
+	background-color: #fefefe;
+	height: 3px;
+	width: 0px;
+	top: 67px;
+	left: 0px;
+	transition: all 500ms;
+}
+
+nav .nav-item:hover,
+nav .nav-item.active {
+	color: #fefefe;
+	cursor: pointer;
+}
+
+nav .nav-item:hover:after,
+nav .nav-item.active:after {
+	width: 100%;
+}
